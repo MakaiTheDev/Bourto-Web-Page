@@ -396,9 +396,12 @@ footer {
   .navbar {
     flex-direction: column;
   }
+  .nav-list {
+    text-align: center;
+  }
   .logo {
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
   }
   .about-container {
     grid-template-columns: 1fr;

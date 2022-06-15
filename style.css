@@ -83,22 +83,24 @@ header {
 }
 
 .hero-bg {
-  background: url("/images/hero-bg.png");
+  background: url("images/hero-bg.png");
   background-position: 0% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   animation: bg-change 16s ease-in-out infinite alternate;
 }
 
+/* Animation */
+
 @keyframes bg-change {
   from {
-    background: url("/images/hero-bg.png");
+    background: url("images/hero-bg.png");
     background-position: 0% 50%;
     background-size: cover;
     background-repeat: no-repeat;
   }
   to {
-    background: url("/images/Rectangle\ 1.png");
+    background: url("images/Rectangle\ 1.png");
     background-position: 0% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -268,27 +270,6 @@ footer {
   padding: 0 1rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #fff;
-  color: #000;
-  font-weight: bold;
-  transition: 500ms letter-spacing ease-in-out;
-}
-
-.btn:hover {
-  letter-spacing: 2px;
-}
-
-.btn-nav {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #fff;
-  background: #ed1f24;
-  font-weight: bold;
-}
-
 .section-head {
   text-align: center;
   font-style: italic;
@@ -310,12 +291,28 @@ footer {
   background: #f64385;
 }
 
-/* .border {
-  height: 2px;
-  width: 20%;
-  background: #ff82b0;
-  margin: 25px auto;
-} */
+/* BTN */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  transition: 500ms letter-spacing ease-in-out;
+}
+
+.btn:hover {
+  letter-spacing: 2px;
+}
+
+.btn-nav {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background: #ed1f24;
+  font-weight: bold;
+}
 
 /* Margin & Padding */
 
@@ -384,12 +381,16 @@ footer {
   display: flex;
 }
 
+/* Tablet */
+
 @media (max-width: 790px) {
   .footer-logo {
     width: 25%;
     cursor: pointer;
   }
 }
+
+/* Phone */
 
 @media (max-width: 599px) {
   .navbar {
@@ -413,7 +414,6 @@ footer {
   .trailer .iframe-container {
     grid-template-columns: 1fr;
   }
-
   .footer-logo {
     width: 70%;
     cursor: pointer;

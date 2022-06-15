@@ -87,7 +87,7 @@ header {
   background-position: 0% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: bg-change 16s ease-in-out infinite;
+  animation: bg-change 16s ease-in-out infinite alternate;
 }
 
 @keyframes bg-change {
@@ -132,6 +132,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 1rem;
 }
 
 .about-img {
@@ -144,6 +145,13 @@ main {
 
 .about-text h2 {
   position: relative;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.about-text h3 {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .about-text h2::before {
@@ -182,7 +190,7 @@ main {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* Footer */
@@ -266,6 +274,11 @@ footer {
   background: #fff;
   color: #000;
   font-weight: bold;
+  transition: 500ms letter-spacing ease-in-out;
+}
+
+.btn:hover {
+  letter-spacing: 2px;
 }
 
 .btn-nav {
@@ -314,7 +327,7 @@ footer {
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 100;
   position: relative;
   background: #000;
   /* margin-top: 3rem; */
@@ -337,10 +350,6 @@ footer {
   -webkit-align-items: center;
   align-items: center;
   cursor: pointer;
-}
-
-.swiper-wrapper {
-  display: flex;
 }
 
 .swiper-button-next,
@@ -373,4 +382,40 @@ footer {
 
 .layer:hover h2 {
   display: flex;
+}
+
+@media (max-width: 790px) {
+  .footer-logo {
+    width: 25%;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 599px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .logo {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-img {
+    max-width: 100%;
+  }
+  .section-head p {
+    opacity: 0.7;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .trailer .iframe-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    width: 70%;
+    cursor: pointer;
+  }
 }

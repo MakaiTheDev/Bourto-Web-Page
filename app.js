@@ -7,7 +7,7 @@ var swiper = new Swiper('.swiper', {
      slidesPerView: 5,
      freeMode: true,
      watchSlidesVisibility: true,
-     watchSlidesProgress: true,  
+     watchSlidesProgress: true, 
      pagination: {
        el: '.swiper-pagination',
        type: 'progressbar',
@@ -16,5 +16,23 @@ var swiper = new Swiper('.swiper', {
        nextEl: '.swiper-button-next',
        prevEl: '.swiper-button-prev',
      },
+     breakpoints: {
+        960: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+        },
+        720: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        540: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+    }
 });
 

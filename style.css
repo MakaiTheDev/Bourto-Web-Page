@@ -421,4 +421,7 @@ footer {
     width: 70%;
     cursor: pointer;
   }
+  .hero-bg {
+    animation: none;
+  }
 }
